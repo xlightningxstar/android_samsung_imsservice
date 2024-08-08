@@ -1,14 +1,14 @@
 # WHAT IS THIS?
-These are files used to enable IMS (VoLTE) for Samsung Galaxy A21s (SM-A217N).
-Original files were taken from Samsung Firmware A217NKSU6CUG1, with extensive modifications for enabling its use on AOSP ROMs.
-While VoLTE has been confirmed to work on LineageOS 18.1 for A21s, additional works are needed for the following:
+These are files used to enable IMS (VoLTE) for Samsung Galaxy Tab A7 (SM-T505).
+Original files were taken from Samsung Firmware T505XXS8CXG1, with extensive modifications for enabling its use on AOSP ROMs.
+While VoLTE has been confirmed to work on LineageOS 21 for T505, additional works are needed for the following:
 1. Enabling its use without setting SELinux to permissive
 2. Testing it on other Android versions and other Galaxy devices
 3. Enabling Video Call
 4. Enabling RCS
 5. Bug fixes & Stabilizations
 
-While it has been tested only on A21s Korean version, it is likely that this will also work on other Samsung devices (albeit with some modifications.)
+While it has been tested only on Tab A7 Indian version, it is likely that this will also work on other Samsung devices (albeit with some modifications.)
 It's most likely to be compatible with trebilized Exynos devices. 
 However, it doesn't mean that compatibility with Snapdragon or MediaTek devices is completely ruled out. As they seem to use the same RIL interface (libsec-ril), 
 there is some chance that this will work with these devices (again, though, with some modifications.)
@@ -29,11 +29,11 @@ there is some chance that this will work with these devices (again, though, with
 2. Build
 > ./build.sh
 
-3. This will generate the smali files that were used to patch imsservice.apk from Samsung Firmware A217NKSU6CUG1 for SM-A217N.
+3. This will generate the smali files that were used to patch imsservice.apk from Samsung Firmware  T505XXS8CXG1 for SM-T505.
 
 # HOW TO APPLY PATCH
 The APK inside proprietary_vendor_samsung_ims has already been patched, so you only need to do this if you want to re-create the changes.
-1. Obtain imsservice.apk from stock A217NKSU6CUG1 firmware
+1. Obtain imsservice.apk from stock  T505XXS8CXG1 firmware
 2. Decompile it using apktool
 3. apply patch to smali files by running 'patch -p1 < smali_patch.diff'
 4. remove following files inside smali folder:
